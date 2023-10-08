@@ -1,0 +1,15 @@
+[submodule "Recruteur"]
+	path = Recruteur
+	url = https://github.com/Salim-belkhir/SeasonTalent_RecruteurMS.git
+[submodule "Utilisateur"]
+	path = Utilisateur
+	url = https://github.com/Salim-belkhir/SeasonTalent_UtilisateurMS.git
+[submodule "ApiGateway"]
+	path = ApiGateway
+	url = https://github.com/Salim-belkhir/SeasonTalent_ApiGateway.git
+[submodule "Candidat"]
+	path = Candidat
+	url = https://github.com/Salim-belkhir/SeasonTalent_CandidatMS.git
+[submodule "EurekaServer"]
+	path = EurekaServer
+	url = https://github.com/Salim-belkhir/SeasonTalent_EurekaMS.git
