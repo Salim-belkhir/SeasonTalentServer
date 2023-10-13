@@ -1,0 +1,50 @@
+version: "1"
+
+services:
+  apiGateway:
+    extends:
+      file: ./ApiGateway/docker-compose.yaml
+      service: apiGateway
+    env_file: .env
+
+  candidat_db:
+    extends:
+      file: ./Candidat/docker-compose.yaml
+      service: candidat_db
+    env_file: .env
+
+  candidat_ms:
+    extends:
+      file: ./Candidat/docker-compose.yaml
+      service: candidat_ms
+    env_file: .env
+
+  eureka:
+    extends:
+      file: ./EurekaServer/docker-compose.yaml
+      service: eureka
+    env_file: .env
+
+  recruteur_db:
+    extends:
+      file: ./Recruteur/docker-compose.yaml
+      service: recruteur_db
+    env_file: .env
+
+  recruteur_ms:
+    extends:
+      file: ./Recruteur/docker-compose.yaml
+      service: recruteur_ms
+    env_file: .env
+
+  utilisateur_db:
+    extends:
+      file: ./Utilisateur/docker-compose.yaml
+      service: utilisateur_db
+    env_file: .env
+
+  utilisateur_ms:
+    extends:
+      file: ./Utilisateur/docker-compose.yaml
+      service: utilisateur_ms
+    env_file: .env

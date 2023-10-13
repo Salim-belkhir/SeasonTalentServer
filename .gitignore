@@ -1,3 +1,9 @@
 .idea
 .vscode
 .metals
+
+
+config.env
+
+.env
+*.log
