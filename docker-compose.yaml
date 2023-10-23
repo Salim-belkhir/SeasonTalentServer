@@ -1,4 +1,4 @@
-version: "1"
+version: "1.0.0"
 
 services:
   apiGateway:
@@ -6,45 +6,68 @@ services:
       file: ./ApiGateway/docker-compose.yaml
       service: apiGateway
     env_file: .env
+    networks:
+      - custom
 
-  candidat_db:
+  candidatdb:
     extends:
       file: ./Candidat/docker-compose.yaml
-      service: candidat_db
+      service: candidatdb
     env_file: .env
+    networks:
+      - custom
 
-  candidat_ms:
+  candidatms:
     extends:
       file: ./Candidat/docker-compose.yaml
-      service: candidat_ms
+      service: candidatms
     env_file: .env
+    networks:
+      - custom
 
   eureka:
     extends:
       file: ./EurekaServer/docker-compose.yaml
       service: eureka
     env_file: .env
+    networks:
+      - custom
 
-  recruteur_db:
+  recruteurdb:
     extends:
       file: ./Recruteur/docker-compose.yaml
-      service: recruteur_db
+      service: recruteurdb
     env_file: .env
+    networks:
+      - custom
 
-  recruteur_ms:
+  recruteurms:
     extends:
       file: ./Recruteur/docker-compose.yaml
-      service: recruteur_ms
+      service: recruteurms
     env_file: .env
+    networks:
+      - custom
 
-  utilisateur_db:
+  utilisateurdb:
     extends:
       file: ./Utilisateur/docker-compose.yaml
-      service: utilisateur_db
+      service: utilisateurdb
     env_file: .env
+    networks:
+      - custom
 
-  utilisateur_ms:
+  utilisateurms:
     extends:
       file: ./Utilisateur/docker-compose.yaml
-      service: utilisateur_ms
+      service: utilisateurms
     env_file: .env
+    networks:
+      - custom
+
+
+
+networks:
+  custom:
+    name: custom
+    driver: bridge
