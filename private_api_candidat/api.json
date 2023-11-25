@@ -1,0 +1,288 @@
+{
+  "candidates": [
+    {
+      "id": 1,
+      "firstname": "John",
+      "lastname": "Doe",
+      "gender": 1,
+      "birthDate": "1990-01-01",
+      "citizenship": "French",
+      "address": {
+        "streetNum": 123,
+        "street": "Main St",
+        "complement": "Apt 4",
+        "zipCode": "12345",
+        "city": "Paris",
+        "country": "France"
+      },
+      "email": "johndoe@example.com",
+      "phone": "123-456-7890",
+      "photo": "url_to_photo",
+      "cv": "url_to_cv",
+      "shortBio": "A brief bio",
+      "references": [
+        {
+          "refName": "Jane Smith",
+          "refEstablishment": "XYZ Corp",
+          "refAddress": {
+            "streetNum": 124,
+            "street": "Second St",
+            "zipCode": "12346",
+            "city": "Paris",
+            "country": "France"
+          },
+          "refPhone": "234-567-8901",
+          "refEmail": "janesmith@example.com"
+        }
+      ],
+      "experiences": [
+        {
+          "job": "Software Developer",
+          "jobCategory": "IT",
+          "startedAt": "2015-06-01",
+          "endedAt": "2020-05-31",
+          "establishment": {
+            "establishmentName": "ABC Inc",
+            "establishmentAddress": {
+              "streetNum": 125,
+              "street": "Third St",
+              "zipCode": "12347",
+              "city": "Paris",
+              "country": "France"
+            }
+          }
+        }
+      ],
+      "availabilities": [
+        {
+          "job": "Project Manager",
+          "jobCategory": "Management",
+          "startsAt": "2023-01-01",
+          "endsAt": "2023-12-31",
+          "places": ["Paris", "Lyon"]
+        }
+      ],
+      "opinions": [
+        {
+          "score": 4,
+          "message": "Great candidate",
+          "employerId": "employer123",
+          "providedAt": "2023-01-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "firstname": "Alice",
+      "lastname": "Martin",
+      "gender": 1,
+      "birthDate": "1985-07-12",
+      "citizenship": "Canadian",
+      "address": {
+        "streetNum": 45,
+        "street": "Maple Street",
+        "complement": "Suite 100",
+        "zipCode": "M4B 1B3",
+        "city": "Toronto",
+        "country": "Canada"
+      },
+      "email": "alicemartin@example.com",
+      "phone": "416-555-1234",
+      "photo": "url_to_photo_alice",
+      "cv": "url_to_cv_alice",
+      "shortBio": "Experienced marketing professional",
+      "references": [
+        {
+          "refName": "Bob Clark",
+          "refEstablishment": "Marketing Inc",
+          "refAddress": {
+            "streetNum": 46,
+            "street": "Oak Street",
+            "zipCode": "M4B 1B4",
+            "city": "Toronto",
+            "country": "Canada"
+          },
+          "refPhone": "416-555-5678",
+          "refEmail": "bobclark@example.com"
+        }
+      ],
+      "experiences": [
+        {
+          "job": "Marketing Manager",
+          "jobCategory": "Marketing",
+          "startedAt": "2010-04-01",
+          "endedAt": "2020-08-31",
+          "establishment": {
+            "establishmentName": "Creative Solutions",
+            "establishmentAddress": {
+              "streetNum": 47,
+              "street": "Pine Street",
+              "zipCode": "M4B 1B5",
+              "city": "Toronto",
+              "country": "Canada"
+            }
+          }
+        }
+      ],
+      "availabilities": [
+        {
+          "job": "Senior Marketing Consultant",
+          "jobCategory": "Marketing",
+          "startsAt": "2023-09-01",
+          "endsAt": "2024-08-31",
+          "places": ["Toronto", "Vancouver"]
+        }
+      ],
+      "opinions": [
+        {
+          "score": 5,
+          "message": "Outstanding work in marketing campaigns",
+          "employerId": "employer456",
+          "providedAt": "2023-02-10"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "firstname": "Hamou",
+      "lastname": "Mi",
+      "gender": 0,
+      "birthDate": "1992-11-30",
+      "citizenship": "British",
+      "address": {
+        "streetNum": 10,
+        "street": "High Street",
+        "complement": "",
+        "zipCode": "E1 6AN",
+        "city": "London",
+        "country": "United Kingdom"
+      },
+      "email": "mohamedali@example.com",
+      "phone": "+44 20 7946 0912",
+      "photo": "url_to_photo_mohamed",
+      "cv": "url_to_cv_mohamed",
+      "shortBio": "Software developer with a passion for mobile applications",
+      "references": [
+        {
+          "refName": "Sarah Johnson",
+          "refEstablishment": "Tech Innovations Ltd",
+          "refAddress": {
+            "streetNum": 11,
+            "street": "Queen Street",
+            "zipCode": "E1 6AE",
+            "city": "London",
+            "country": "United Kingdom"
+          },
+          "refPhone": "+44 20 7946 0987",
+          "refEmail": "sarahjohnson@example.com"
+        }
+      ],
+      "experiences": [
+        {
+          "job": "Mobile Developer",
+          "jobCategory": "IT",
+          "startedAt": "2016-09-01",
+          "endedAt": "2022-05-31",
+          "establishment": {
+            "establishmentName": "Global Tech",
+            "establishmentAddress": {
+              "streetNum": 12,
+              "street": "King Street",
+              "zipCode": "E1 6AG",
+              "city": "London",
+              "country": "United Kingdom"
+            }
+          }
+        }
+      ],
+      "availabilities": [
+        {
+          "job": "Lead Developer",
+          "jobCategory": "IT",
+          "startsAt": "2023-10-01",
+          "endsAt": "2024-09-30",
+          "places": ["London", "Manchester"]
+        }
+      ],
+      "opinions": [
+        {
+          "score": 4,
+          "message": "Very skilled in mobile development",
+          "employerId": "employer789",
+          "providedAt": "2023-03-15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "firstname": "Emily",
+      "lastname": "Chen",
+      "gender": 1,
+      "birthDate": "1988-05-23",
+      "citizenship": "American",
+      "address": {
+        "streetNum": 22,
+        "street": "Sunset Boulevard",
+        "complement": "Apt 202",
+        "zipCode": "90026",
+        "city": "Los Angeles",
+        "country": "USA"
+      },
+      "email": "emilychen@example.com",
+      "phone": "323-555-0123",
+      "photo": "url_to_photo_emily",
+      "cv": "url_to_cv_emily",
+      "shortBio": "Graphic designer specializing in branding and digital media",
+      "references": [
+        {
+          "refName": "David Lee",
+          "refEstablishment": "Design Studio Inc",
+          "refAddress": {
+            "streetNum": 23,
+            "street": "Hollywood Blvd",
+            "zipCode": "90028",
+            "city": "Los Angeles",
+            "country": "USA"
+          },
+          "refPhone": "323-555-0456",
+          "refEmail": "davidlee@example.com"
+        }
+      ],
+      "experiences": [
+        {
+          "job": "Graphic Designer",
+          "jobCategory": "Design",
+          "startedAt": "2012-06-01",
+          "endedAt": "2023-04-30",
+          "establishment": {
+            "establishmentName": "Creative Minds",
+            "establishmentAddress": {
+              "streetNum": 24,
+              "street": "Vine Street",
+              "zipCode": "90038",
+              "city": "Los Angeles",
+              "country": "USA"
+            }
+          }
+        }
+      ],
+      "availabilities": [
+        {
+          "job": "Art Director",
+          "jobCategory": "Design",
+          "startsAt": "2023-06-01",
+          "endsAt": "2024-05-31",
+          "places": ["Los Angeles", "San Francisco"]
+        }
+      ],
+      "opinions": [
+        {
+          "score": 5,
+          "message": "Excellent in creative design",
+          "employerId": "employer012",
+          "providedAt": "2023-05-10"
+        }
+      ]
+    }
+  ]
+}

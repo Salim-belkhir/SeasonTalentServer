@@ -1,69 +1,103 @@
-version: "1.0.0"
+version: "3.8"
 
 services:
-  apiGateway:
-    extends:
-      file: ./ApiGateway/docker-compose.yaml
-      service: apiGateway
-    env_file: .env
-    networks:
-      - custom
+   apiGateway:
+     extends:
+       file: ./ApiGateway/docker-compose.yaml
+       service: apiGateway
+     env_file: .env
+     networks:
+       - custom
 
-  candidatdb:
-    extends:
-      file: ./Candidat/docker-compose.yaml
-      service: candidatdb
-    env_file: .env
-    networks:
-      - custom
+   authdb:
+     extends:
+       file: ./ApiGateway/docker-compose.yaml
+       service: authdb
+     env_file: .env
+     networks:
+       - custom
 
-  candidatms:
-    extends:
-      file: ./Candidat/docker-compose.yaml
-      service: candidatms
-    env_file: .env
-    networks:
-      - custom
+   candidatdb:
+     extends:
+       file: ./Candidat/docker-compose.yaml
+       service: candidatdb
+     env_file: .env
+     networks:
+       - custom
 
-  eureka:
-    extends:
-      file: ./EurekaServer/docker-compose.yaml
-      service: eureka
-    env_file: .env
-    networks:
-      - custom
+   candidatms:
+     extends:
+       file: ./Candidat/docker-compose.yaml
+       service: candidatms
+     env_file: .env
+     networks:
+       - custom
 
-  recruteurdb:
-    extends:
-      file: ./Recruteur/docker-compose.yaml
-      service: recruteurdb
-    env_file: .env
-    networks:
-      - custom
+   eureka:
+     extends:
+       file: ./EurekaServer/docker-compose.yaml
+       service: eureka
+     env_file: .env
+     networks:
+       - custom
 
-  recruteurms:
-    extends:
-      file: ./Recruteur/docker-compose.yaml
-      service: recruteurms
-    env_file: .env
-    networks:
-      - custom
+   recruteurdb:
+     extends:
+       file: ./Recruteur/docker-compose.yaml
+       service: recruteurdb
+     env_file: .env
+     networks:
+       - custom
 
-  utilisateurdb:
-    extends:
-      file: ./Utilisateur/docker-compose.yaml
-      service: utilisateurdb
-    env_file: .env
-    networks:
-      - custom
+   recruteurms:
+     extends:
+       file: ./Recruteur/docker-compose.yaml
+       service: recruteurms
+     env_file: .env
+     networks:
+       - custom
 
-  utilisateurms:
-    extends:
-      file: ./Utilisateur/docker-compose.yaml
-      service: utilisateurms
-    env_file: .env
-    networks:
-      - custom
+   utilisateurdb:
+     extends:
+       file: ./Utilisateur/docker-compose.yaml
+       service: utilisateurdb
+     env_file: .env
+     networks:
+       - custom
+
+   utilisateurms:
+     extends:
+       file: ./Utilisateur/docker-compose.yaml
+       service: utilisateurms
+     env_file: .env
+     networks:
+       - custom
+
+   zookeeper:
+     image: zookeeper:latest
+     container_name: Zookeeper
+     ports:
+       - "${ZOOKEPER_PORT}:${ZOOKEPER_PORT}"
+     env_file: .env
+     networks:
+       - custom
+
+   kafka:
+     image: wurstmeister/kafka:latest
+     container_name: Kafka
+     ports:
+       - "${KAFKA_PORT}:${KAFKA_PORT}"
+     environment:
+       KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:9093,OUTSIDE://localhost:9092
+       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+       KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
+       KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+       KAFKA_ZOOKEEPER_CONNECT: zookeeper:${ZOOKEPER_PORT}
+     env_file: .env
+     depends_on:
+       - zookeeper
+     networks:
+       - custom
 
 
 

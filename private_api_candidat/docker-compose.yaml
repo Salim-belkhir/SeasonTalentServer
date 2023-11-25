@@ -1,0 +1,16 @@
+version: '1.0.0'
+services:
+  apiPrivateCandidat:
+    image: api-private-candidat:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    ports:
+      - "9000:9000"
+    networks:
+      - api_private
+
+networks:
+  api_private:
+    driver: bridge
