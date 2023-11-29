@@ -3,7 +3,5 @@
 .metals
 
 
-config.env
-
-.env
+/.env
 *.log

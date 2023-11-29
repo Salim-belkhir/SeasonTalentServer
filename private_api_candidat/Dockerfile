@@ -1,14 +1,13 @@
-FROM node:14
+FROM node:latest
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY . /app/
+COPY package*.json ./
 
-RUN ["npm", "install", "json-server"]
+RUN npm install -g json-server
 
-EXPOSE 9000
+COPY . .
 
-ARG PORT_API_JSON
-ENV PORT_API_JSON=$PORT_API_JSON
+EXPOSE 3000
 
-CMD ["npx", "json-server", "--watch", "api.json", "--port", "9000"]
+CMD ["npx", "json-server", "--watch", "api.json"]
